@@ -2,12 +2,10 @@ package com.gamedev;
 
 import java.awt.*;
 import java.util.LinkedList;
-import java.util.Random;
 
 public class Handler {
 
     LinkedList<GameObject> object = new LinkedList<GameObject>();
-    private int enemyShooting;
 
     public void tick() {
         for(int i = 0; i < object.size(); i++){
@@ -25,9 +23,5 @@ public class Handler {
 
     public void addObject(GameObject object){
         this.object.add(object);
-    }
-
-    public void removeObject(GameObject object){
-        this.object.remove(object);
     }
 }

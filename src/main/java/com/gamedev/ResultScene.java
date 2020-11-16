@@ -8,8 +8,7 @@ public class ResultScene extends GameObject {
     * Victory - 1
     * Loss    - 2*/
     private int result = 0;
-    private Handler handler;
-    private int percentage;
+    private final Handler handler;
     private String finalText = " ";
     private final int FONT_SIZE = 70;
 
@@ -23,7 +22,7 @@ public class ResultScene extends GameObject {
         for(int i = 0; i < handler.object.size(); i++){
             if(handler.object.get(i).getId() == ID.Player){
                 Player player = (Player)handler.object.get(i);
-                percentage = player.getPercentage();
+                int percentage = player.getPercentage();
                 if(Enemy.score >= 50 * Game.ENEMY_OBJECTS && percentage > 0){
                     result = 1;
                     finalText = "VICTORY";

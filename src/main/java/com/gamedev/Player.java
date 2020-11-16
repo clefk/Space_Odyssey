@@ -1,19 +1,15 @@
 package com.gamedev;
 
 import java.awt.*;
-import javax.swing.*;
-import java.awt.image.ImageObserver;
-import java.awt.Component;
-
 
 public class Player extends GameObject{
 
     private static final int PLAYER_WIDTH = 64;
     private static final int PLAYER_HEIGHT = 64;
     private int percentage = 100;
-    private Image image;
-    private Handler handler;
-    private KeyInput in;
+    private final Image image;
+    private final Handler handler;
+    private final KeyInput in;
 
 
     public Player(int x, int y, ID id, Handler handler)
@@ -39,6 +35,7 @@ public class Player extends GameObject{
     public int getPercentage(){
         return percentage;
     }
+
     public static int getPlayerWidth()
     {
         return PLAYER_WIDTH;
@@ -69,8 +66,5 @@ public class Player extends GameObject{
                 }
             }
         }
-
     }
-
-
 }

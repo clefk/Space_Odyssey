@@ -5,7 +5,7 @@ import java.awt.*;
 public class HUD extends GameObject{
 
     private int percentage;
-    private Handler handler;
+    private final Handler handler;
     private final int FONT_SIZE = 16;
 
     public HUD(int x, int y, ID id, Handler handler){

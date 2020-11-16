@@ -1,16 +1,15 @@
 package com.gamedev;
 
 import java.awt.*;
-import java.util.ArrayList;
 
 public class Enemy extends GameObject {
 
     private final static int ENEMY_WIDTH = 32;
     private final static int ENEMY_HEIGHT = 32;
     public static int score = 0;
-    private boolean shooting = false;
-    private Handler handler;
-    private Image image;
+    private boolean shooting;
+    private final Handler handler;
+    private final Image image;
     private int offsetX;
     private int offsetY;
 
@@ -45,14 +44,6 @@ public class Enemy extends GameObject {
         }
     }
 
-    public boolean isShooting() { return shooting; }
-    public int getEnemyWidth(){
-        return ENEMY_WIDTH;
-    }
-    public int getEnemyHeight(){
-        return ENEMY_HEIGHT;
-    }
-
     public void setShooting(boolean shooting) { this.shooting = shooting; }
 
     public void render(Graphics g){
@@ -73,6 +64,4 @@ public class Enemy extends GameObject {
             }
         }
     }
-
-
 }

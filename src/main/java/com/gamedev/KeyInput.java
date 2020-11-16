@@ -2,26 +2,24 @@ package com.gamedev;
 
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
+import java.util.Arrays;
 
 public class KeyInput extends KeyAdapter {
 
-    private Handler handler;
-    private Player player;
+    private final Handler handler;
     private static boolean shooting = false;
-    private boolean[] keyDown = new boolean[2];
+    private final boolean[] keyDown = new boolean[2];
 
     public KeyInput(Handler handler)
     {
         this.handler = handler;
-
-        for(int i = 0; i < keyDown.length; i++)
-            keyDown[i] = false;
+        Arrays.fill(keyDown, false);
     }
     public boolean isShooting(){
         return shooting;
     }
     public void setShooting(boolean shooting){
-        this.shooting = shooting;
+        KeyInput.shooting = shooting;
     }
 
     public void keyPressed(KeyEvent e){

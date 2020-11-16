@@ -6,10 +6,9 @@ import java.io.InputStream;
 
 public class Projectile extends GameObject {
 
-    private String source;
-    private Handler handler;
-    private Image image;
-    private InputStream file;
+    private final String source;
+    private final Handler handler;
+    private final Image image;
 
     public Projectile(int x, int y, ID id, String source, Handler handler){
         super(x, y, id);
@@ -24,10 +23,6 @@ public class Projectile extends GameObject {
 
     private static final int PROJECTILE_WIDTH = 15;
     private static final int PROJECTILE_HEIGHT = 50;
-
-    public void setSource(String source){
-        this.source = source;
-    }
 
     public String getSource(){
         return source;
